@@ -1,8 +1,8 @@
 name := "scala-uri"
 
-organization  := "io.lemonlabs"
+organization  := "com.hypertino"
 
-version       := "0.4.17"
+version       := "0.4.17-NO-SPRAY"
 
 scalaVersion  := "2.12.0"
 
@@ -28,7 +28,7 @@ scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8", "-featur
 
 libraryDependencies += "org.parboiled" %% "parboiled" % "2.1.3"
 
-libraryDependencies += "io.spray" %%  "spray-json" % "1.3.2"
+libraryDependencies += "com.hypertino" %%  "json-binders" % "1.0-SNAPSHOT"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test"
 
