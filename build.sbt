@@ -2,13 +2,13 @@ name := "scala-uri"
 
 organization  := "com.hypertino"
 
-version       := "0.4.18-NO-SPRAY"
+version       := "0.4.19-NO-SPRAY"
 
 crossScalaVersions := Seq("2.12.3", "2.11.11")
 
 scalaVersion  := crossScalaVersions.value.head
 
-coverageEnabled := scalaVersion.value startsWith "2.12"
+coverageEnabled in Test := scalaVersion.value startsWith "2.12"
 
 lazy val updatePublicSuffixes = taskKey[Unit]("Updates the public suffix Trie at com.netaporter.uri.internet.PublicSuffixes")
 
