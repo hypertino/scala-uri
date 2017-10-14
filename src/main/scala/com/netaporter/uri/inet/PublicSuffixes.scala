@@ -15,10 +15,10 @@ object PublicSuffixes {
 
   private def valueToTrie(content: Value): Trie = {
     Trie(
-      content.c.toMap.map { kv ⇒
+      content.dynamic.c.toMap.map { kv ⇒
         kv._1.charAt(0) → valueToTrie(kv._2)
       }.toMap,
-      content.e.toBoolean
+      content.dynamic.e.toBoolean
     )
   }
 }

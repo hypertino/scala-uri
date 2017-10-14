@@ -2,11 +2,11 @@ name := "scala-uri"
 
 organization  := "com.hypertino"
 
-version       := "0.4.17-NO-SPRAY"
+version       := "0.4.18-NO-SPRAY"
 
-scalaVersion  := "2.12.0"
+crossScalaVersions := Seq("2.12.3", "2.11.11")
 
-crossScalaVersions := Seq("2.10.6", "2.11.8", "2.12.0")
+scalaVersion  := crossScalaVersions.value.head
 
 coverageEnabled := scalaVersion.value startsWith "2.12"
 
@@ -28,7 +28,7 @@ scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8", "-featur
 
 libraryDependencies += "org.parboiled" %% "parboiled" % "2.1.3"
 
-libraryDependencies += "com.hypertino" %%  "json-binders" % "1.0-SNAPSHOT"
+libraryDependencies += "com.hypertino" %%  "json-binders" % "1.2.0"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test"
 
